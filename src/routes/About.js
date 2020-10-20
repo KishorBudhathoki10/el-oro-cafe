@@ -1,15 +1,32 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import classes from "./About.module.css";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function About() {
   const imgRef = useRef();
   const contentRef = useRef();
 
   useEffect(() => {
-    gsap.from(imgRef.current, { x: -200, duration: 2, opacity: 0 });
-    gsap.from(contentRef.current, { x: 200, duration: 2, opacity: 0 });
+    gsap.from(imgRef.current, {
+      x: -200,
+      duration: 2,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: imgRef.current,
+        markers: true,
+        start: "top 20%",
+      },
+    });
+    gsap.from(contentRef.current, {
+      x: 200,
+      duration: 2,
+      opacity: 0,
+      scrollTrigger: { trigger: contentRef.current, start: "top 80%" },
+    });
   });
 
   return (
