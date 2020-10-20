@@ -1,0 +1,31 @@
+.About {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #846155;
+  background-color: white;
+}
+
+.imageContainer {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.imageContainer img {
+  width: 400px;
+}
+
+h1  {
+  display: inline-block;
+}
+
+@media (max-width: 400px) {
+  .imageContainer img {
+    width: 200px;
+  }
+}

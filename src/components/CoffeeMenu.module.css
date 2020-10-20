@@ -1,0 +1,43 @@
+.CoffeeMenu {
+  background-color: #846155;
+  width: 60%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+}
+
+.CoffeeMenu h2 {
+  font-size: 3rem;
+  position: relative;
+  left: 3rem;
+  color: #533d35;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.CoffeeMenu_container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.CoffeeMenu_container ul {
+  list-style: none;
+}
+
+.CoffeeMenu_container ul li {
+  padding: 0.8rem;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .CoffeeMenu {
+    width: 100%;
+    justify-content: center;
+  }
+}
