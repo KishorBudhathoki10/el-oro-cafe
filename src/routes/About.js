@@ -17,7 +17,6 @@ function About() {
       opacity: 0,
       scrollTrigger: {
         trigger: imgRef.current,
-        markers: true,
         start: "top 20%",
       },
     });
