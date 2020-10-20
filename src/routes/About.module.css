@@ -6,6 +6,7 @@
   align-items: center;
   color: #846155;
   background-color: white;
+  overflow: hidden;
 }
 
 .imageContainer {
