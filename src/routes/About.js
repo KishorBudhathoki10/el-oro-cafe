@@ -17,7 +17,7 @@ function About() {
       opacity: 0,
       scrollTrigger: {
         trigger: imgRef.current,
-        start: "top 20%",
+        start: "top 40%",
       },
     });
     gsap.from(contentRef.current, {
