@@ -57,21 +57,20 @@
   background-color: #846155;
   width: 60%;
   height: 50vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   pointer-events: none;
   overflow: hidden;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .navLinks {
   list-style: none;
   text-align: center;
-  margin-left: -2.5rem;
+  position: absolute;
+  top: 10%;
+  left: 9%;
 }
 
 .navLinks li {
