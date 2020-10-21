@@ -1,0 +1,99 @@
+.NavMobile {
+  z-index: 999;
+  width: 100%;
+}
+
+.NavMobile__Open {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 6rem;
+}
+
+.NavIcon {
+  background-color: #846155;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.line1,
+.line2,
+.line3 {
+  height: 2px;
+  margin: 0.2rem;
+  background-color: white;
+}
+
+.line1 {
+  width: 9px;
+}
+
+.line2 {
+  width: 18px;
+}
+
+.line3 {
+  width: 9px;
+}
+
+.logo {
+  margin-right: 1rem;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  color: #846155;
+  font-style: italic;
+}
+
+.NavMobile__Closed {
+  clip-path: ellipse(100% 60% at 10% 20%);
+  background-color: #846155;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+  color: white;
+}
+
+.navLinks {
+  list-style: none;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+}
+
+.navLinks li {
+  font-weight: 600;
+  font-size: 2rem;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.closeMenuButton {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 58%;
+  left: 26%;
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.closeMenuButton img {
+  width: 70%;
+}

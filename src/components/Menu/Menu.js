@@ -1,6 +1,6 @@
 import React from "react";
 
-import classes from "./CoffeeMenu.module.css";
+import classes from "./Menu.module.css";
 
 function CoffeeMenu({ menuItem }) {
   const renderMenuAccordingly = () => {

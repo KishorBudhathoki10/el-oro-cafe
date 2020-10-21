@@ -13,7 +13,7 @@ function About() {
   useEffect(() => {
     gsap.from(imgRef.current, {
       x: -200,
-      duration: 2,
+      duration: 1,
       opacity: 0,
       scrollTrigger: {
         trigger: imgRef.current,
@@ -22,7 +22,7 @@ function About() {
     });
     gsap.from(contentRef.current, {
       x: 200,
-      duration: 2,
+      duration: 1,
       opacity: 0,
       scrollTrigger: { trigger: contentRef.current, start: "top 80%" },
     });
