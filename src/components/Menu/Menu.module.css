@@ -1,10 +1,10 @@
-.CoffeeMenu {
+.Menu {
   background-color: #846155;
-  width: 60%;
+  width: 60vw;
   position: absolute;
   right: 0;
   top: 0;
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -12,42 +12,52 @@
   color: white;
 }
 
-.CoffeeMenu h2 {
+.Menu h2 {
   font-size: 3rem;
-  position: relative;
-  left: 3rem;
   color: #533d35;
   text-decoration: underline;
   font-style: italic;
+  margin-bottom: 3rem;
+  display: inline-block;
 }
 
-.CoffeeMenu_container {
+.Menu_container {
   display: flex;
   justify-content: space-evenly;
 }
 
-.CoffeeMenu_container ul {
+.Menu_container ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.CoffeeMenu_container ul li {
+.Menu_container ul li {
   padding: 0.8rem;
   font-weight: 600;
 }
 
-@media (max-height: 600px) {
-  .CoffeeMenu h2 {
+@media (max-height: 500px) {
+  .Menu h2 {
     font-size: 2rem;
   }
 
-  .CoffeeMenu_container ul li {
-    font-size: 0.7rem;
+  .Menu_container ul li {
+    font-size: 0.5rem;
   }
 }
 
 @media (max-width: 600px) {
-  .CoffeeMenu {
+  .Menu {
     width: 100%;
     justify-content: center;
+  }
+
+  .Menu h2 {
+    font-size: 2.5rem;
+  }
+
+  .Menu_container ul li {
+    font-size: 1.3rem;
   }
 }

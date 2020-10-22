@@ -2,15 +2,15 @@ import React from "react";
 
 import classes from "./Menu.module.css";
 
-function CoffeeMenu({ menuItem }) {
+function Menu({ menuItem }) {
   const renderMenuAccordingly = () => {
     if (menuItem) {
       if (menuItem === "Coffee") {
         return (
-          <div className={classes.CoffeeMenu}>
+          <div className={classes.Menu}>
             <h2>Coffee</h2>
 
-            <div className={classes.CoffeeMenu_container}>
+            <div className={classes.Menu_container}>
               <ul>
                 <li>Espresso</li>
                 <li>Cortado</li>
@@ -51,10 +51,10 @@ function CoffeeMenu({ menuItem }) {
         );
       } else if (menuItem === "Tea") {
         return (
-          <div className={classes.CoffeeMenu}>
+          <div className={classes.Menu}>
             <h2>Tea</h2>
 
-            <div className={classes.CoffeeMenu_container}>
+            <div className={classes.Menu_container}>
               <ul>
                 <li>Masala Chai</li>
                 <li>Dirty Chai</li>
@@ -91,10 +91,10 @@ function CoffeeMenu({ menuItem }) {
         );
       } else if (menuItem === "Breakfast") {
         return (
-          <div className={classes.CoffeeMenu}>
+          <div className={classes.Menu}>
             <h2>Breakfast</h2>
 
-            <div className={classes.CoffeeMenu_container}>
+            <div className={classes.Menu_container}>
               <ul>
                 <li>Masala Chai</li>
                 <li>Dirty Chai</li>
@@ -138,4 +138,4 @@ function CoffeeMenu({ menuItem }) {
   return renderMenuAccordingly();
 }
 
-export default CoffeeMenu;
+export default Menu;

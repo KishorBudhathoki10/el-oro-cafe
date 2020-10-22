@@ -1,10 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
+import { Link } from "react-scroll";
 
 import classes from "./NavMobile.module.css";
 import Modal from "../Modal/Modal";
 
-function NavMobile() {
+function NavMobile({ setMenuItem }) {
   const [navIconClicked, setNavIconClicked] = useState(false);
 
   const navIconRef = useRef();
@@ -63,6 +64,16 @@ function NavMobile() {
     });
   };
 
+  const onClickMenu = (title) => {
+    setMenuItem(title);
+    setNavIconClicked(false);
+  };
+
+  const onClickOtherLink = () => {
+    setMenuItem(null);
+    setNavIconClicked(false);
+  };
+
   return (
     <div className={classes.NavMobile}>
       <div className={classes.NavMobile__Open}>
@@ -83,10 +94,42 @@ function NavMobile() {
 
       <div className={classes.NavMobile__Closed} ref={navClosedRef}>
         <ul className={classes.navLinks}>
-          <li onClick={() => setNavIconClicked(false)}>Home</li>
-          <li onClick={() => setNavIconClicked(false)}>Menu</li>
-          <li onClick={() => setNavIconClicked(false)}>About</li>
-          <li onClick={() => setNavIconClicked(false)}>Contact</li>
+          <Link
+            activeClass={classes.active}
+            to="Home"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={0}
+          >
+            <li onClick={() => onClickOtherLink()}>Home</li>
+          </Link>
+
+          <Link to="Home" spy={true} smooth={true} duration={500} offset={0}>
+            <li onClick={() => onClickMenu("Coffee")}>Menu</li>
+          </Link>
+
+          <Link
+            activeClass={classes.active}
+            to="About"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={0}
+          >
+            <li onClick={() => onClickOtherLink()}>About</li>
+          </Link>
+
+          <Link
+            activeClass={classes.active}
+            to="Contact"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={0}
+          >
+            <li onClick={() => onClickOtherLink()}>Contact</li>
+          </Link>
         </ul>
 
         <div

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { Link } from "react-scroll";
 
 import MenuItemLink from "../MenuItemLink/MenuItemLink";
 import classes from "./NavBar.module.css";
@@ -78,13 +79,24 @@ function NavBar({ coverImageRef, setMenuItem }) {
         <h3 onClick={() => setMenuItem(null)} ref={titleRef}>
           La Masala Cafe
         </h3>
+
         <ul className={classes.navLinks}>
           <li onClick={() => setMenuItem(null)} ref={menuRef}>
             Menu
           </li>
-          <li onClick={() => setMenuItem(null)} ref={aboutRef}>
-            About
-          </li>
+
+          <Link
+            activeClass={classes.active}
+            to="About"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={0}
+          >
+            <li onClick={() => setMenuItem(null)} ref={aboutRef}>
+              About
+            </li>
+          </Link>
           <li onClick={() => setMenuItem(null)} ref={contactRef}>
             Contact
           </li>

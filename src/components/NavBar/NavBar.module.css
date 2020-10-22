@@ -17,6 +17,11 @@ nav {
   min-width: 350px;
 }
 
+.active {
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+
 .navClosed ul {
   display: flex;
   justify-content: space-around;

@@ -29,7 +29,7 @@ function About() {
   });
 
   return (
-    <div className={classes.About}>
+    <div className={classes.About} id="About">
       <div className={classes.imageContainer}>
         <img src="./images/coffee.jpg" alt="" ref={imgRef} />
 

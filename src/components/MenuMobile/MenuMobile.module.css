@@ -1,0 +1,49 @@
+.MenuMobile {
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.black {
+  color: black;
+}
+
+.white {
+  color: white;
+}
+
+.subNav {
+  position: absolute;
+  top: 8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 100vw;
+}
+
+.subNav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 0;
+  text-align: center;
+}
+
+.subNav ul li {
+  width: 100%;
+  margin: 0 1rem;
+  padding: 0.5rem;
+
+  box-shadow: 0.1px 0.1px 0px black;
+  cursor: pointer;
+}
+
+.active {
+  border-top: 2px solid white;
+}
