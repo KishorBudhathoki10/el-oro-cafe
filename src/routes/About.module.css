@@ -17,12 +17,12 @@
   flex-wrap: wrap;
 }
 
-.imageContainer img {
-  width: 400px;
+.imageContainer h2 {
+  font-size: 3rem;
 }
 
-h1  {
-  display: inline-block;
+.imageContainer img {
+  width: 400px;
 }
 
 @media (max-width: 600px) {

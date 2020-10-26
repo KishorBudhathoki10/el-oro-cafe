@@ -5,7 +5,12 @@ import { Link } from "react-scroll";
 import MenuItemLink from "../MenuItemLink/MenuItemLink";
 import classes from "./NavBar.module.css";
 
-function NavBar({ coverImageRef, setMenuItem }) {
+function NavBar({
+  coverImageRef1,
+  coverImageRef2,
+  coverImageRef3,
+  setMenuItem,
+}) {
   const menuRef = useRef();
   const navOpenRef = useRef();
   const navRef = useRef();
@@ -16,11 +21,14 @@ function NavBar({ coverImageRef, setMenuItem }) {
   useEffect(() => {
     const tl = new gsap.timeline({ paused: true, reversed: true });
 
-    tl.to(coverImageRef.current, {
-      duration: 1,
-      width: "60%",
-      ease: "Power2.easeOut",
-    })
+    tl.to(
+      [coverImageRef1.current, coverImageRef2.current, coverImageRef3.current],
+      {
+        duration: 1,
+        width: "60%",
+        ease: "Power2.easeOut",
+      }
+    )
       .to(
         navRef.current,
         {
@@ -71,7 +79,7 @@ function NavBar({ coverImageRef, setMenuItem }) {
         tl.reverse();
       });
     });
-  }, [coverImageRef]);
+  }, [coverImageRef1, coverImageRef2, coverImageRef3]);
 
   return (
     <nav ref={navRef}>
@@ -97,9 +105,19 @@ function NavBar({ coverImageRef, setMenuItem }) {
               About
             </li>
           </Link>
-          <li onClick={() => setMenuItem(null)} ref={contactRef}>
-            Contact
-          </li>
+
+          <Link
+            activeClass={classes.active}
+            to="Contact"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={0}
+          >
+            <li onClick={() => setMenuItem(null)} ref={contactRef}>
+              Contact
+            </li>
+          </Link>
         </ul>
       </div>
 

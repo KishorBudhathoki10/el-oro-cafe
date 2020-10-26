@@ -34,7 +34,7 @@ function About() {
         <img src="./images/coffee.jpg" alt="" ref={imgRef} />
 
         <div ref={contentRef}>
-          <h1>About Us</h1>
+          <h2>About Us</h2>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text

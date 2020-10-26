@@ -1,0 +1,53 @@
+.Contact {
+  background-color: white;
+  color: #846155;
+  padding-top: 1rem;
+  min-height: 80vh;
+}
+
+.Contact h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.Contact_Container {
+  text-align: center;
+}
+
+.Contact_Map {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.Contact_Map iframe {
+  width: 50vw;
+  height: 50vh;
+  min-width: 400px;
+  border: 2px solid #846155;
+}
+
+.Contact_Info {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.Contact_Info_Container h3 {
+  display: inline-block;
+  margin: 2rem 0 0 0;
+  font-weight: 400;
+}
+
+.Contact_Info_Container p {
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+@media (max-width: 430px) {
+  .Contact_Map iframe {
+    min-width: 250px;
+    height: 20vh;
+    width: 90vw;
+  }
+}

@@ -54,7 +54,7 @@
   }
 
   .Menu h2 {
-    font-size: 2.5rem;
+    display: none;
   }
 
   .Menu_container ul li {
