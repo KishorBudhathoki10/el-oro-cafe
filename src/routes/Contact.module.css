@@ -2,7 +2,14 @@
   background-color: white;
   color: #846155;
   padding-top: 1rem;
-  min-height: 80vh;
+  min-height: 100vh;
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
 }
 
 .Contact h2 {

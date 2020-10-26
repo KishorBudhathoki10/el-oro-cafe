@@ -35,6 +35,7 @@
 .Menu_container ul li {
   padding: 0.8rem;
   font-weight: 600;
+  position: relative;
 }
 
 @media (max-height: 500px) {
@@ -51,6 +52,7 @@
   .Menu {
     width: 100%;
     justify-content: center;
+    position: relative;
   }
 
   .Menu h2 {

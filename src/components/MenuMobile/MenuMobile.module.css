@@ -9,10 +9,12 @@
 
 .black {
   color: black;
+  background-color: white;
 }
 
 .white {
   color: white;
+  background-color: #846155;
 }
 
 .subNav {
@@ -39,7 +41,6 @@
   width: 100%;
   margin: 0 1rem;
   padding: 0.5rem;
-
   box-shadow: 0.1px 0.1px 0px black;
   cursor: pointer;
 }
