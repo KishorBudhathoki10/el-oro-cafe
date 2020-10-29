@@ -5,9 +5,11 @@ import classes from "./Contact.module.css";
 function Contact() {
   return (
     <div className={classes.Contact} id="Contact">
-      <div className={classes.container}>
+      <div className={classes.title}>
         <h2>Contact</h2>
+      </div>
 
+      <div className={classes.container}>
         <div className={classes.Contact_Container}>
           <div className={classes.Contact_Map}>
             <iframe

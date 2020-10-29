@@ -1,12 +1,12 @@
 .Menu {
-  background-color: #846155;
+  background-color: #7aabb9;
   width: 60vw;
   position: absolute;
   right: 0;
   top: 0;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: center;
   flex-direction: column;
   color: white;
@@ -14,10 +14,6 @@
 
 .Menu h2 {
   font-size: 3rem;
-  color: #533d35;
-  text-decoration: underline;
-  font-style: italic;
-  margin-bottom: 3rem;
   display: inline-block;
 }
 

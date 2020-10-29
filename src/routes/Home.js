@@ -81,7 +81,7 @@ function Home() {
           <div className={classesSlide} ref={slide1Ref}>
             <img
               className={classes.coverImage}
-              src="./images/coffee.jpg"
+              src="./images/coffeeshop.jpg"
               alt="hello"
               ref={coverImageRef1}
             />
@@ -99,7 +99,7 @@ function Home() {
           <div className={classesSlide} ref={slide3Ref}>
             <img
               className={classes.coverImage}
-              src="./images/coffee2.jpg"
+              src="./images/coffee.jpg"
               alt="hello"
               ref={coverImageRef3}
             />
