@@ -81,7 +81,7 @@ function Home() {
           <div className={classesSlide} ref={slide1Ref}>
             <img
               className={classes.coverImage}
-              src="./images/coffeeshop.jpg"
+              src="./images/coffeeshop.webp"
               alt="hello"
               ref={coverImageRef1}
             />
@@ -90,7 +90,7 @@ function Home() {
           <div className={classesSlide} ref={slide2Ref}>
             <img
               className={classes.coverImage}
-              src="./images/tea.jpg"
+              src="./images/tea.webp"
               alt="hello"
               ref={coverImageRef2}
             />
@@ -99,7 +99,7 @@ function Home() {
           <div className={classesSlide} ref={slide3Ref}>
             <img
               className={classes.coverImage}
-              src="./images/coffee.jpg"
+              src="./images/coffee.webp"
               alt="hello"
               ref={coverImageRef3}
             />

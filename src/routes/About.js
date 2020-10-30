@@ -46,7 +46,7 @@ function About() {
       className={classes.About}
       id="About"
       style={{
-        backgroundImage: `url(./images/coffee_shop.jpg)`,
+        backgroundImage: `url(./images/coffee_shop.webp)`,
       }}
     >
       <div className={classes.overlay}></div>
@@ -54,7 +54,7 @@ function About() {
         <h2>About Us</h2>
       </div>
       <div className={classes.imageContainer}>
-        <img src="./images/team.jpg" alt="" ref={imgRef} />
+        <img src="./images/team.webp" alt="" ref={imgRef} />
 
         <div className={classes.content} ref={contentRef}>
           <p>
