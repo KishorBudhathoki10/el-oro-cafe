@@ -55,6 +55,10 @@
 }
 
 @media (max-width: 450px) {
+  .About {
+    min-height: 150vh;
+  }
+
   .title h2 {
     font-size: 2rem;
   }
