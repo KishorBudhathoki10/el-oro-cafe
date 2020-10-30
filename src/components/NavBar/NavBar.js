@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Link } from "react-scroll";
 
-import MenuItemLink from "../MenuItemLink/MenuItemLink";
 import classes from "./NavBar.module.css";
 
 function NavBar({
@@ -122,23 +121,20 @@ function NavBar({
       </div>
 
       <div className={classes.navOpen} ref={navOpenRef}>
-        <MenuItemLink
-          title="Coffee"
-          backgroundImageUrl="./images/coffee2.jpg"
-          setMenuItem={setMenuItem}
-        />
+        <div className={classes.coffee} onClick={() => setMenuItem("Coffee")}>
+          <h2>Coffee</h2>
+        </div>
 
-        <MenuItemLink
-          title="Tea"
-          backgroundImageUrl="./images/tea1.jpg"
-          setMenuItem={setMenuItem}
-        />
+        <div className={classes.tea} onClick={() => setMenuItem("Tea")}>
+          <h2>Tea</h2>
+        </div>
 
-        <MenuItemLink
-          title="Breakfast"
-          backgroundImageUrl="./images/breakfast.jpg"
-          setMenuItem={setMenuItem}
-        />
+        <div
+          className={classes.breakfast}
+          onClick={() => setMenuItem("Breakfast")}
+        >
+          <h2>Breakfast</h2>
+        </div>
       </div>
     </nav>
   );

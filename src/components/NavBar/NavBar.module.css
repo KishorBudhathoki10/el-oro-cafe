@@ -54,3 +54,32 @@ nav {
   pointer-events: none;
   overflow: hidden;
 }
+
+.coffee,
+.tea,
+.breakfast {
+  color: white;
+  padding: 2rem;
+  width: 40%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.coffee {
+  background-color: #664b41;
+}
+
+.tea {
+  background-color: rgb(2, 59, 2);
+}
+
+.breakfast {
+  background-color: rgb(168, 60, 56);
+}
+
+.coffee:hover,
+.tea:hover,
+.breakfast:hover {
+  padding: 4rem;
+}

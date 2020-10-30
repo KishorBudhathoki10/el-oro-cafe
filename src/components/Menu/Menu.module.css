@@ -6,7 +6,7 @@
   top: 0;
   min-height: 100vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   text-align: center;
   flex-direction: column;
   color: white;
@@ -15,6 +15,7 @@
 .Menu h2 {
   font-size: 3rem;
   display: inline-block;
+  margin-bottom: 5rem;
 }
 
 .Menu_container {
