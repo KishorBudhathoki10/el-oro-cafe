@@ -50,7 +50,15 @@
   width: 50%;
 }
 
+.content p {
+  font-size: 2rem;
+}
+
 @media (max-width: 450px) {
+  .title h2 {
+    font-size: 2rem;
+  }
+
   .imageContainer img {
     width: 280px;
   }

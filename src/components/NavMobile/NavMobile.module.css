@@ -1,7 +1,6 @@
 .NavMobile {
   z-index: 999;
   width: 100%;
-  pointer-events: none;
   position: fixed;
 }
 
@@ -57,56 +56,61 @@
 }
 
 .NavMobile__Closed {
-  background-color: #846155;
-  width: 60%;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  pointer-events: none;
-  overflow: hidden;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  transition: 0.5s;
+}
+
+.NavMovile_Closed_hide {
+  left: -100%;
 }
 
 .navLinks {
   list-style: none;
-  text-align: left;
-  margin-left: -2.5rem;
-}
-
-.navLinks li {
-  font-weight: 600;
-  font-size: 2rem;
-  padding: 1rem;
-  margin: 5rem;
-  cursor: pointer;
-
-  display: block;
-}
-
-.closeMenuButton {
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  top: 3%;
-  left: 80%;
-  background-color: white;
-  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
+  flex-direction: column;
+}
+
+.navLinks li {
+  font-size: 3.5rem;
+  margin: 1.5rem;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.socialMedia_links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.socialMedia_links li {
+  padding: 2rem;
+}
+
+.closeMenuButton {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 4%;
+  left: 80%;
 }
 
 .closeMenuButton img {
-  width: 70%;
+  width: 100%;
 }
 
 .active li {
-  box-shadow: 0px 0px 100px black;
-  background-color: white;
-  color: #846155;
+  color: #7aabb9;
 }

@@ -1,85 +1,25 @@
-import React, { useRef, useEffect, useState } from "react";
-import { gsap } from "gsap";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
 
 import classes from "./NavMobile.module.css";
-import Modal from "../Modal/Modal";
 
-function NavMobile({ setMenuItem }) {
+function NavMobile() {
   const [navIconClicked, setNavIconClicked] = useState(false);
 
-  const navIconRef = useRef();
-  const navClosedRef = useRef();
-  const closeMenuButtonRef = useRef();
+  let navClosedClass;
 
-  const tl = new gsap.timeline({ paused: true, reversed: true });
-
-  useEffect(() => {
-    tl.fromTo(navIconRef.current, { rotation: 0 }, { rotation: 90 }).fromTo(
-      navClosedRef.current,
-      1,
-      {
-        opacity: 0,
-        scale: 0,
-        ease: "Power2.easeOut",
-        transformOrigin: "left top",
-      },
-      {
-        opacity: 1,
-        scale: 1,
-        ease: "back",
-        onComplete: function () {
-          navClosedRef.current.style.pointerEvents = "auto";
-        },
-      }
-    );
-    navIconRef.current.addEventListener("click", (e) => {
-      if (tl.isActive()) {
-        e.preventDefault();
-        return false;
-      }
-      tl.play();
-    });
-  }, [tl]);
-
-  const showModalAccordingly = () => {
-    if (navIconClicked) {
-      return <Modal />;
-    }
-  };
-
-  const onCloseMenuButtonClick = () => {
-    const tl = gsap.timeline();
-
-    tl.to(closeMenuButtonRef.current, {
-      rotation: 360,
-      scale: 2,
-      padding: 0,
-      backgroundColor: "#846155",
-      opacity: 0,
-      onComplete: () => {
-        setNavIconClicked(false);
-        tl.reverse();
-      },
-    });
-  };
-
-  const onClickMenu = (title) => {
-    setMenuItem(title);
-    setNavIconClicked(false);
-  };
-
-  const onClickOtherLink = () => {
-    setMenuItem(null);
-    setNavIconClicked(false);
-  };
+  if (navIconClicked) {
+    navClosedClass = classes.NavMobile__Closed;
+  } else {
+    navClosedClass =
+      classes.NavMobile__Closed + " " + classes.NavMovile_Closed_hide;
+  }
 
   return (
     <div className={classes.NavMobile}>
       <div className={classes.NavMobile__Open}>
         <div
           className={classes.NavIcon}
-          ref={navIconRef}
           onClick={() => setNavIconClicked(true)}
         >
           <div className={classes.line1}></div>
@@ -92,7 +32,7 @@ function NavMobile({ setMenuItem }) {
         </div>
       </div>
 
-      <div className={classes.NavMobile__Closed} ref={navClosedRef}>
+      <div className={navClosedClass}>
         <ul className={classes.navLinks}>
           <Link
             activeClass={classes.active}
@@ -102,11 +42,18 @@ function NavMobile({ setMenuItem }) {
             duration={500}
             offset={0}
           >
-            <li onClick={() => onClickOtherLink()}>Home</li>
+            <li onClick={() => setNavIconClicked(false)}>Home</li>
           </Link>
 
-          <Link to="Home" spy={true} smooth={true} duration={500} offset={0}>
-            <li onClick={() => onClickMenu("Coffee")}>Menu</li>
+          <Link
+            activeClass={classes.active}
+            to="Menu"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={0}
+          >
+            <li onClick={() => setNavIconClicked(false)}>Menu</li>
           </Link>
 
           <Link
@@ -117,7 +64,7 @@ function NavMobile({ setMenuItem }) {
             duration={500}
             offset={0}
           >
-            <li onClick={() => onClickOtherLink()}>About</li>
+            <li onClick={() => setNavIconClicked(false)}>About</li>
           </Link>
 
           <Link
@@ -128,20 +75,39 @@ function NavMobile({ setMenuItem }) {
             duration={500}
             offset={0}
           >
-            <li onClick={() => onClickOtherLink()}>Contact</li>
+            <li onClick={() => setNavIconClicked(false)}>Contact</li>
           </Link>
+        </ul>
+
+        <ul className={classes.socialMedia_links}>
+          <li>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./images/facebook.png" alt="facebook_icon" />
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./images/instagram.png" alt="instagram_icon" />
+            </a>
+          </li>
         </ul>
 
         <div
           className={classes.closeMenuButton}
-          onClick={onCloseMenuButtonClick}
-          ref={closeMenuButtonRef}
+          onClick={() => setNavIconClicked(false)}
         >
           <img src="./images/close.svg" alt="Close" />
         </div>
       </div>
-
-      {showModalAccordingly()}
     </div>
   );
 }

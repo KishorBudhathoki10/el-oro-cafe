@@ -66,6 +66,10 @@
 }
 
 @media (max-width: 450px) {
+  .title h2 {
+    font-size: 2rem;
+  }
+
   .Contact_Map iframe {
     min-width: 250px;
     height: 20vh;

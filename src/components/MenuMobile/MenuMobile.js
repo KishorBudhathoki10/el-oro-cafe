@@ -3,12 +3,8 @@ import React, { useState } from "react";
 import classes from "./MenuMobile.module.css";
 import Menu from "../Menu/Menu";
 
-function MenuMobile({ menuItem }) {
-  const [itemType, setItemType] = useState(null);
-
-  if (!menuItem) {
-    return null;
-  }
+function MenuMobile() {
+  const [itemType, setItemType] = useState("Coffee");
 
   const isActive = (type) => {
     if (type === itemType) {
@@ -16,14 +12,8 @@ function MenuMobile({ menuItem }) {
     }
   };
 
-  let mainClass = classes.MenuMobile + " " + classes.black;
-
-  if (itemType) {
-    mainClass = classes.MenuMobile + " " + classes.white;
-  }
-
   return (
-    <div className={mainClass}>
+    <div className={classes.MenuMobile} id="Menu">
       <div className={classes.subNav}>
         <ul>
           <li

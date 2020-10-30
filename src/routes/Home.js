@@ -5,7 +5,6 @@ import Menu from "../components/Menu/Menu";
 import useWindowSize from "../hooks/useWidowSize";
 import NavBar from "../components/NavBar/NavBar";
 import NavMobile from "../components/NavMobile/NavMobile";
-import MenuMobile from "../components/MenuMobile/MenuMobile";
 
 function Home() {
   const coverImageRef1 = useRef();
@@ -58,7 +57,7 @@ function Home() {
         />
       );
     } else {
-      return <NavMobile setMenuItem={setMenuItem} />;
+      return <NavMobile />;
     }
   };
 
@@ -66,7 +65,7 @@ function Home() {
     if (size.width > 600) {
       return <Menu menuItem={menuItem} />;
     } else {
-      return <MenuMobile menuItem={menuItem} />;
+      return null;
     }
   };
 
