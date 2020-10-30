@@ -130,7 +130,7 @@ function NavBar({
 
         <MenuItemLink
           title="Tea"
-          backgroundImageUrl="./images/tea.jpg"
+          backgroundImageUrl="./images/tea1.jpg"
           setMenuItem={setMenuItem}
         />
 
