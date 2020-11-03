@@ -29,7 +29,7 @@ function About() {
       opacity: 0,
       scrollTrigger: {
         trigger: imgRef.current,
-        start: "top 50%",
+        start: "top 60%",
       },
     });
 
@@ -37,7 +37,7 @@ function About() {
       x: 200,
       duration: 1,
       opacity: 0,
-      scrollTrigger: { trigger: contentRef.current, start: "top 60%" },
+      scrollTrigger: { trigger: contentRef.current, start: "top 80%" },
     });
   }, []);
 

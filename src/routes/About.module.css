@@ -27,6 +27,7 @@
   background-color: #7aabb9;
   border-radius: 30% 70% 70% 30% / 30% 30% 80% 80%;
   padding: 2rem;
+  margin: 3rem auto;
 }
 
 .title h2 {
@@ -55,10 +56,6 @@
 }
 
 @media (max-width: 450px) {
-  .About {
-    min-height: 150vh;
-  }
-
   .title h2 {
     font-size: 2rem;
   }
