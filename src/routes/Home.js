@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect } from "react";
 
 import classes from "./Home.module.css";
 import Menu from "../components/Menu/Menu";
-import useWindowSize from "../hooks/useWidowSize";
 import NavBar from "../components/NavBar/NavBar";
 import NavMobile from "../components/NavMobile/NavMobile";
 
@@ -17,8 +16,6 @@ function Home() {
   const slide3Ref = useRef();
 
   const [menuItem, setMenuItem] = useState(null);
-
-  const size = useWindowSize();
 
   useEffect(() => {
     let slideIndex = 0;
@@ -46,35 +43,19 @@ function Home() {
     }
   }, []);
 
-  const showNavAccordingly = () => {
-    if (size.width > 600) {
-      return (
+  const classesSlide = classes.slide + " " + classes.fade;
+
+  return (
+    <div className={classes.Home} id="Home">
+      <header>
         <NavBar
           setMenuItem={setMenuItem}
           coverImageRef1={coverImageRef1}
           coverImageRef2={coverImageRef2}
           coverImageRef3={coverImageRef3}
         />
-      );
-    } else {
-      return <NavMobile />;
-    }
-  };
 
-  const showMenuAccordingly = () => {
-    if (size.width > 600) {
-      return <Menu menuItem={menuItem} />;
-    } else {
-      return null;
-    }
-  };
-
-  const classesSlide = classes.slide + " " + classes.fade;
-
-  return (
-    <div className={classes.Home} id="Home">
-      <header>
-        {showNavAccordingly()}
+        <NavMobile />
 
         <div className={classes.slides} ref={slidesRef}>
           <div className={classesSlide} ref={slide1Ref}>
@@ -106,7 +87,7 @@ function Home() {
         </div>
       </header>
 
-      {showMenuAccordingly()}
+      <Menu menuItem={menuItem} />
     </div>
   );
 }

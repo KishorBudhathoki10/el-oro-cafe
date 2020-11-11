@@ -1,6 +1,6 @@
 .Menu {
-  background-color: #7aabb9;
-  width: 60vw;
+  background-color: #321919;
+  width: 60%;
   position: absolute;
   right: 0;
   top: 0;
@@ -10,6 +10,7 @@
   text-align: center;
   flex-direction: column;
   color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .Menu h2 {
@@ -35,7 +36,7 @@
   position: relative;
 }
 
-@media (max-height: 500px) {
+@media only screen and (max-height: 500px) {
   .Menu h2 {
     font-size: 2rem;
   }
@@ -45,11 +46,13 @@
   }
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .Menu {
     width: 100%;
     justify-content: center;
     position: relative;
+    background-color: white;
+    color: #a97148;
   }
 
   .Menu h2 {

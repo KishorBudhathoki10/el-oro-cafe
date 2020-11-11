@@ -12,32 +12,36 @@ function About() {
   const titleRef = useRef();
 
   useEffect(() => {
-    gsap.from(titleRef.current, {
-      rotate: -90,
-      opacity: 0,
-      duration: 1,
-      ease: "bounce.in",
-      scrollTrigger: {
-        trigger: titleRef.current,
-        start: "top 30%",
-      },
-    });
+    const tl = gsap.timeline({ paused: true });
 
-    gsap.from(imgRef.current, {
+    tl.from(imgRef.current, {
       x: -200,
       duration: 1,
       opacity: 0,
-      scrollTrigger: {
-        trigger: imgRef.current,
-        start: "top 60%",
-      },
-    });
+    })
+      .from(
+        titleRef.current,
+        {
+          opacity: 0,
+          duration: 1.3,
+          y: 40,
+        },
+        "-=1"
+      )
+      .from(
+        contentRef.current,
+        {
+          x: 200,
+          duration: 1,
+          opacity: 0,
+        },
+        "-=1.3"
+      );
 
-    gsap.from(contentRef.current, {
-      x: 200,
-      duration: 1,
-      opacity: 0,
-      scrollTrigger: { trigger: contentRef.current, start: "top 80%" },
+    ScrollTrigger.create({
+      trigger: imgRef.current,
+      start: "top 200",
+      onEnter: () => tl.play(),
     });
   }, []);
 
@@ -49,15 +53,15 @@ function About() {
         backgroundImage: `url(./images/coffee_shop.webp)`,
       }}
     >
-      <div className={classes.overlay}></div>
-      <div className={classes.title} ref={titleRef}>
-        <h2>About Us</h2>
-      </div>
-      <div className={classes.imageContainer}>
-        <img src="./images/team.webp" alt="" ref={imgRef} />
+      <div className={classes.container}>
+        <div className={classes.imageContainer}>
+          <img src="./images/team.webp" alt="" ref={imgRef} />
+        </div>
 
-        <div className={classes.content} ref={contentRef}>
-          <p>
+        <div className={classes.content}>
+          <h2 ref={titleRef}>About Us</h2>
+
+          <p ref={contentRef}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type

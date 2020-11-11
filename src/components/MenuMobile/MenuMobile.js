@@ -39,7 +39,7 @@ function MenuMobile() {
         </ul>
       </div>
 
-      <div>
+      <div className={classes.menu}>
         <Menu menuItem={itemType} />
       </div>
     </div>

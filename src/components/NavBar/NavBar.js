@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { Link } from "react-scroll";
 
 import classes from "./NavBar.module.css";
+import socialLinks from "../../constants/socialLinks";
 
 function NavBar({
   coverImageRef1,
@@ -71,6 +72,7 @@ function NavBar({
       ref.current.addEventListener("click", (e) => {
         if (tl.isActive()) {
           e.preventDefault();
+          e.stopPropagation();
           return false;
         }
 
@@ -121,19 +123,37 @@ function NavBar({
       </div>
 
       <div className={classes.navOpen} ref={navOpenRef}>
-        <div className={classes.coffee} onClick={() => setMenuItem("Coffee")}>
-          <h2>Coffee</h2>
+        <div className={classes.navOpenContainer}>
+          <div className={classes.navOpenImage}>
+            <img src="./images/contact.webp" alt="menu" />
+          </div>
+
+          <div className={classes.menuLinks}>
+            <h2 onClick={() => setMenuItem("Coffee")}>Coffee Menu</h2>
+
+            <h2 onClick={() => setMenuItem("Tea")}>Tea Menu</h2>
+
+            <h2 onClick={() => setMenuItem("Breakfast")}>Breakfast Menu</h2>
+          </div>
         </div>
 
-        <div className={classes.tea} onClick={() => setMenuItem("Tea")}>
-          <h2>Tea</h2>
-        </div>
+        <div className={classes.socialMedia_links_Container}>
+          <h3>Follow Us!</h3>
 
-        <div
-          className={classes.breakfast}
-          onClick={() => setMenuItem("Breakfast")}
-        >
-          <h2>Breakfast</h2>
+          <div className={classes.socialMedia_links}>
+            {socialLinks.map((link) => {
+              return (
+                <a
+                  href={link.url}
+                  key={link.id}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {link.icon}
+                </a>
+              );
+            })}
+          </div>
         </div>
       </div>
     </nav>

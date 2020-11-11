@@ -2,6 +2,7 @@
   z-index: 999;
   width: 100%;
   position: fixed;
+  display: none;
 }
 
 .NavMobile__Open {
@@ -14,7 +15,7 @@
 }
 
 .NavIcon {
-  background-color: #846155;
+  background-color: #a97148;
   height: 4rem;
   width: 4rem;
   border-radius: 50%;
@@ -51,7 +52,7 @@
 
 .logo h1 {
   font-size: 2rem;
-  color: #846155;
+  color: #a97148;
   font-style: italic;
 }
 
@@ -93,10 +94,16 @@
   list-style: none;
   display: flex;
   justify-content: center;
+  margin-top: 2rem;
 }
 
 .socialMedia_links li {
   padding: 2rem;
+}
+
+.socialMedia_links a {
+  font-size: 2.5rem;
+  color: white;
 }
 
 .closeMenuButton {
@@ -112,5 +119,11 @@
 }
 
 .active li {
-  color: #7aabb9;
+  color: #a97148;
+}
+
+@media only screen and (max-width: 600px) {
+  .NavMobile {
+    display: block;
+  }
 }

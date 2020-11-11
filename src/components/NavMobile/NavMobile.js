@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-scroll";
 
 import classes from "./NavMobile.module.css";
+import socialLinks from "../../constants/socialLinks";
 
 function NavMobile() {
   const [navIconClicked, setNavIconClicked] = useState(false);
@@ -80,25 +81,15 @@ function NavMobile() {
         </ul>
 
         <ul className={classes.socialMedia_links}>
-          <li>
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="./images/facebook.png" alt="facebook_icon" />
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="./images/instagram.png" alt="instagram_icon" />
-            </a>
-          </li>
+          {socialLinks.map((link) => {
+            return (
+              <li key={link.id}>
+                <a href={link.url} target="_blank" rel="noopener noreferrer">
+                  {link.icon}
+                </a>
+              </li>
+            );
+          })}
         </ul>
 
         <div

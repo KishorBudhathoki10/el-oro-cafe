@@ -1,5 +1,5 @@
 .Contact {
-  background-color: #7aabb9;
+  background-color: white;
   padding-top: 1rem;
   min-height: 100vh;
   min-width: 100vw;
@@ -7,80 +7,174 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding: 0;
+  overflow: hidden;
+}
+
+.imageContainer {
+  width: 45%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  width: 55%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  color: white;
+  place-items: center;
+  color: #a97148;
 }
 
 .title {
-  background-color: #ffffff;
-  border-radius: 30% 70% 70% 30% / 30% 30% 80% 80%;
-  padding: 2rem;
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  width: 11rem;
+  height: 11rem;
+  /* background-color: rgb(235, 181, 137); */
+  background-color: #a97148;
+  border-radius: 50%;
+  right: -5rem;
+  top: 3.9rem;
+  z-index: 1;
 }
 
 .title h2 {
-  font-size: 3rem;
-  text-align: center;
-  color: #7aabb9;
+  font-weight: 700;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  margin-top: 10rem;
+  z-index: 2;
+  position: relative;
 }
 
-.container {
+.title span {
+  color: white;
+}
+
+.form {
+  width: 40vw;
+  max-width: 800px;
+  position: relative;
+}
+
+.form button {
+  padding: 0.7rem 4rem;
+  color: white;
+  background-color: #a97148;
+  border: none;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+}
+
+.formInputs {
   width: 100%;
 }
 
-.Contact_Container {
-  text-align: center;
-}
-
-.Contact_Map {
+.formControl {
   width: 100%;
+  margin-bottom: 4rem;
 }
 
-.Contact_Map iframe {
-  width: 70%;
-  height: 50vh;
-  min-width: 400px;
-  max-width: 1200px;
-  max-height: 1000px;
-  border: 2px solid #846155;
-}
-
-.Contact_Info {
-  width: 70%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.Contact_Info_Container h3 {
-  display: inline-block;
-  margin: 2rem 0 0 0;
-  font-weight: 400;
-  margin-right: 1rem;
-}
-
-.Contact_Info_Container p {
-  display: inline-block;
-  margin-top: 0.5rem;
+.formControl label {
   font-weight: 600;
+  display: block;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
 }
 
-@media (max-width: 450px) {
+.formControl input,
+.formControl textarea {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #f1f5f8;
+  border: none;
+  letter-spacing: 2px;
+  font-size: 1.6rem;
+  color: #7c7774;
+}
+
+.googleMap {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  background-color: #e4e4e4;
+  position: absolute;
+  right: 0;
+}
+
+.googleMap div {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1rem;
+  color: #a97148;
+}
+
+.googleMap img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2rem;
+}
+
+.contactInfo {
+  background-color: #f1f5f8;
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.contactInfo h6 {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.contactInfo p {
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .imageContainer {
+    display: none;
+  }
+
+  .contact {
+    width: 100vw;
+  }
+
   .title h2 {
-    font-size: 2rem;
+    font-weight: 700;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin: 10rem 0;
+    z-index: 2;
+    position: relative;
   }
 
-  .Contact_Map iframe {
-    min-width: 250px;
-    height: 20vh;
+  .form {
     width: 90vw;
+    max-width: 800px;
+    position: relative;
   }
 
-  .Contact_Info_Container h3 {
-    display: block;
+  .contactInfo {
+    width: 100vw;
+    height: 18rem;
+    flex-direction: column;
+    margin-top: 5rem;
   }
 
-  .Contact_Info_Container p {
-    display: block;
+  .contactInfo div {
+    width: 100%;
+    text-align: center;
   }
 }
