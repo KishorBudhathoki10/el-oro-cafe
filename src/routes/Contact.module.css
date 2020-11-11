@@ -160,6 +160,18 @@
     position: relative;
   }
 
+  .circle {
+    position: absolute;
+    width: 9rem;
+    height: 9rem;
+    /* background-color: rgb(235, 181, 137); */
+    background-color: #a97148;
+    border-radius: 50%;
+    right: -4rem;
+    top: 4.2rem;
+    z-index: 1;
+  }
+
   .form {
     width: 90vw;
     max-width: 800px;
