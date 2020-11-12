@@ -29,7 +29,7 @@ function NavMobile() {
         </div>
 
         <div className={classes.logo}>
-          <h1>La Masala Cafe</h1>
+          <h1>EL ORO CAFE</h1>
         </div>
       </div>
 

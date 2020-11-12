@@ -42,13 +42,19 @@ function Contact() {
 
             <button type="submit">Send</button>
 
-            <div className={classes.googleMap}>
-              <div>
-                <p>Get</p>
-                <p>Directions</p>
+            <a
+              href="https://www.google.com/maps/dir//Carrer+de+Pujol,+17,+08022+Barcelona,+Spain/@41.4047965,2.0663435,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x12a4980d97007bd1:0xf7ee94a0598337c6!2m2!1d2.1363834!2d41.4048177"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className={classes.googleMap}>
+                <div>
+                  <p>Get</p>
+                  <p>Directions</p>
+                </div>
+                <img src="./images/google_map.webp" alt="google-map-icon" />
               </div>
-              <img src="./images/google_map.webp" alt="google-map-icon" />
-            </div>
+            </a>
           </form>
         </div>
 

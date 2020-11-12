@@ -85,9 +85,9 @@ function NavBar({
   return (
     <nav ref={navRef}>
       <div className={classes.navClosed}>
-        <h3 onClick={() => setMenuItem(null)} ref={titleRef}>
-          La Masala Cafe
-        </h3>
+        <h1 onClick={() => setMenuItem(null)} ref={titleRef}>
+          EL ORO CAFE
+        </h1>
 
         <ul className={classes.navLinks}>
           <li onClick={() => setMenuItem(null)} ref={menuRef}>
